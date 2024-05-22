@@ -56,7 +56,7 @@ Inicio
             escreval("Carregando....")
             timer(2500)
             timer(0)
-            escreval("Sucesso! O estoque atual é",resultado)
+            escreval("Sucesso! O estoque atual é de [",resultado,"]")
             estoque_atual:= resultado
             escreva("Deseja continuar? [s/n] ")
             leia(continuar)

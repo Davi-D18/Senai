@@ -14,7 +14,7 @@ Inicio
       escreval("Erro! o número de ínicio deve ser menor ou igual ao número final ")
       escreval("Tente escrever um número menor de ínicio ")
    senao
-      //caso o num1 seja menor que o num2 então ele vai
+      //caso o num1 seja maior que o num2 então ele vai
       //exibir uma mensagem de erro e para a execução
       // total:= 0;
       //antes de iniciar o loop, ele vai ativar a variável total
