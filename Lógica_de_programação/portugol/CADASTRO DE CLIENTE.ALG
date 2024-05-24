@@ -16,7 +16,8 @@ inicio
       leia(email_2)
       escreva("Insira sua senha ")
       leia(senha_2)
-      escreval("Carregando.....")
+      escreval("")
+      escreval("                 Carregando.....           ")
       timer(2500)
       timer(0)
       se (email_2 = email) e (senha_2 = senha) entao
@@ -39,12 +40,15 @@ inicio
             troca_senha(escolha_usuario)
          fimescolha
       senao
+         escreval("")
          escreval("Erro, email ou senha incorretos ")
          escreval("")
          escreva("Deseja redefnir a senha? ")
          leia(redefinir_senha)
          se (redefinir_senha = "s")entao
             troca_senha(redefinir_senha)
+            //O procedimento de troca de senha é chamado
+            //aqui para ser executado
          senao
             escreval("Acesso negado, tente redefinir a senha ")
          fimse
@@ -69,9 +73,15 @@ inicio
       escreva("Confirmar cadastro? ")
       leia(decisao_2)
    ate (decisao_2 = "s")
+   escreval("")
+   escreval("                 Carregando.....           ")
+   timer(2500)
+   timer(0)
    nome:= nome
    email:= email
    senha:= senha
+   escreval("")
+   escreval("Parabéns! Cadastro feito ")
 
 fimprocedimento
 
@@ -87,15 +97,20 @@ fimprocedimento
 
 Inicio
    repita
+      escreval("")
       escreval("==============================================")
-      escreval("              Bem Vindo                  ")
+      escreval("                    Bem Vindo                  ")
       escreval("")
       escreva("Você tem cadastro na Pltaforma? ")
       leia(peg_plataforma)
       se (peg_plataforma = "s") entao
          login(peg_plataforma)
+         //se o usúario tiver cadastro, o algoritmo vai
+         //executar os passos do procedimento login
       senao
          cadastro(peg_plataforma)
+         //Aqui irá executar os passos do cadastro conforme
+         //configurado na área das variáveis
       fimse
    ate (decisao = "n")
    limpatela
