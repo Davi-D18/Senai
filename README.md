@@ -1,2 +1,4 @@
 # Senai
- Repositório do curso de técnico em informática para internet no Senai
+ Repositório do curso de Técnico em Informática para Internet no Senai
+ 
+ Aluno: Davi
