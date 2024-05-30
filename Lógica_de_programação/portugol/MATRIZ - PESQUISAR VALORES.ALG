@@ -24,7 +24,7 @@ inicio
          para j de 1 ate 4 faca
             se(mat[i,j]) = valor entao
                escreval("")
-               escreval("Número encontrado na posição X =",i,", Y =",j)
+               escreval("Número encontrado na posição: X =",i,", Y =",j)
             fimse
          fimpara
       fimpara
@@ -47,11 +47,12 @@ inicio
          escreval("")
       fimpara
       //Acima irá exibir a matriz 4x4 com um timer de 200
+      escreval("")
       escreva("Deseja Continuar o Programa?")
       leia(decisao)
       limpatela
       //Se o usuário quiser continuar, ele vai repetir
       //todo o programa
    ate (decisao = "n")
-   escreval("               Algoritmo Encerrado              ")
+   escreval("              Algoritmo Encerrado              ")
 fimalgoritmo
