@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade sobre for</title>
+</head>
+<body>
+    <p>Armazenar 10 valores e calcular a soma e média</p>
+    <script>
+        let num=0;
+        let media;
+        let soma=0; 
+
+        for (let index = 1; index < 11; index++) {
+            num = parseFloat(prompt('Digite o '+index+' ° valor:'));
+            soma = soma+num; 
+        }
+        media = soma/10; 
+        alert('A soma do seu resultado é '+soma.toFixed(1));
+        alert('A média é '+media.toFixed(1));
+    </script>
+</body>
+</html>

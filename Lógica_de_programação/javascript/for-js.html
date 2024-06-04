@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro HTML</title>
+</head>
+<body>
+    <script>
+        let x=0;
+        let total=0;
+        //for é um loop, tipo o 'para' do visualG
+        for (let index = 1; index < 5; index++) {
+            //váriavel index é declarada e recebe 1, enquanto for < 5 irá repetir (no caso 4 vezes)
+            x=parseFloat(prompt('Digite a '+index+'ª a nota:'));
+            //index é o índice, o contador, parecido com o i do visualG
+            total=total+x;
+        
+        }
+        let media=total/4;
+        if (media>=7) {
+            alert('Aluno aprovado com média de '+media.toFixed(1));
+        } else {
+            alert('Aluno reprovado com média de '+media.toFixed(1));
+        }
+    </script>
