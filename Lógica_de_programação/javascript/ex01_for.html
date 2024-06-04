@@ -8,10 +8,13 @@
 <body>
     <p>Armazenar 10 valores e calcular a soma e média</p>
     <script>
+        //antes de iniciar o loop, as variáveis num e soma recebem 0
         let num=0;
         let media;
         let soma=0; 
 
+        //estrutura de repetição onde o index é o contador
+        //index++ vai acrescentar 1 ao contador a cada volta
         for (let index = 1; index < 11; index++) {
             num = parseFloat(prompt('Digite o '+index+' ° valor:'));
             soma = soma+num; 
