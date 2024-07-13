@@ -1,15 +1,18 @@
+/* Diminuindo o tamanho da imgagem e mudando para um formato circular */
+
 img {
   width: 150px;
   border-radius: 50%;
 }
 
-.nome-usuario {
   /* Alinhamento do nome*/
+.nome-usuario {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Adicionando bordas na tabela */
 table,
 tr,
 td,
@@ -18,15 +21,21 @@ th {
   border-collapse: collapse;
 }
 
+/* Configirações de cabeçalho da tabela */
+
 th {
   background-color: rgba(65, 64, 64, 0.719);
   color: white;
 }
 
+/* Acrescentando um padding para aumentar um pouco xada célula */
+
 td, th {
   padding: 7px;
   text-align: center;
 }
+
+/* Estilização das tags a(Âncora) */
 
 a {
   color: black;
@@ -40,4 +49,8 @@ a:hover {
 
 .email {
   color: blue;
+}
+
+footer > a:before{
+  content: '🔗  ';
 }
