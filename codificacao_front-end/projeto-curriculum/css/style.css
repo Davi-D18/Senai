@@ -54,3 +54,29 @@ a:hover {
 footer > a:before{
   content: '🔗  ';
 }
+
+/* Usando media queries */
+
+ @media(max-width:600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.3rem;
+  }
+  
+  h2 {
+    text-align: center;
+  } 
+  
+  img {
+    display: flex;
+    margin: auto;
+  }
+} 
+
+@media(min-width:1000px) {
+  main {
+    max-width: 1010px;
+  }
+}
