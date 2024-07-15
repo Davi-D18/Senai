@@ -5,7 +5,7 @@ img {
   border-radius: 50%;
 }
 
-  /* Alinhamento do nome*/
+/* Alinhamento do nome*/
 .nome-usuario {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ th {
   border-collapse: collapse;
 }
 
-/* Configirações de cabeçalho da tabela */
+/* Configurações de cabeçalho da tabela */
 
 th {
   background-color: rgba(65, 64, 64, 0.719);
@@ -30,7 +30,8 @@ th {
 
 /* Acrescentando um padding para aumentar um pouco cada célula */
 
-td, th {
+td,
+th {
   padding: 7px;
   text-align: center;
 }
@@ -51,8 +52,8 @@ a:hover {
   color: blue;
 }
 
-footer > a:before{
-  content: '▸  ';
+footer > a:before {
+  content: "▸  ";
 }
 
 footer {
@@ -61,25 +62,30 @@ footer {
 
 /* Usando media queries */
 
- @media(max-width:550px) {
+/* Tela de celular aproximadamente */
+
+@media (max-width: 550px) {
   footer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   h2 {
     text-align: center;
-  } 
-  
+  }
+
   img {
     display: flex;
     margin: auto;
   }
-} 
+}
 
-@media(min-width:1000px) {
-  main {
-    max-width: 1010px;
+/* Tela de Pc/Tv aproximadamente */
+
+@media (min-width: 900px) {
+  body {
+    max-width: 1000px;
+    margin: auto;
   }
 }
