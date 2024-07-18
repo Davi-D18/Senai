@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário do Currículo</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário do Currículo</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Contato</h1>
+      </header>
+      <form action="submit">
+        <div class="nome">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Insira seu nome"
+          />
+        </div>
+
+        <div class="email">
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Insira seu Email"
+          />
+        </div>
+
+        <div class="mensagem">
+          <label for="mensagem">Mensagem:</label>
+          <input
+            type="text"
+            id="mensagem"
+            name="mensagem"
+            placeholder="Insira sua mensagem"
+          />
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="voltar">
+        <a href="index.html">Voltar</a>
+      </div>
+    </main>
+  </body>
 </html>
