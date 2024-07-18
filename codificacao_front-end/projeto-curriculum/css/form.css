@@ -1,3 +1,7 @@
+:root {
+  ---altura:22vh;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -23,7 +27,7 @@ img {
 }
 
 body {
-  margin-top: 12.6%;
+  margin-top: 17.5vh;
   background-color: #ccc;
   background-image: url(../assets/fundo.jpg);
   background-position: center;
@@ -41,19 +45,31 @@ main {
 }
 
 .mensagem > input {
-  height: 60px;
+  height: 80px;
+}
+
+.mensagem {
+  display: flex;
+  flex-direction: column;
+  margin-left: 46px;
 }
 
 input {
   padding: 5px 0;
   height: 25px;
+  width: 330px;
   text-align: center;
   border-radius: 5px;
 }
 
 button {
   width: 90px;
-  background: linear-gradient(to right, rgb(80, 15, 209), rgb(132, 46, 230), rgba(156, 59, 220, 0.694));
+  background: linear-gradient(
+    to right,
+    rgb(80, 15, 209),
+    rgb(132, 46, 230),
+    rgba(156, 59, 220, 0.694)
+  );
   border: 1px solid black;
   padding: 10px;
   border-radius: 8px;
@@ -73,6 +89,84 @@ a:hover {
 .voltar {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   font-size: 20px;
+}
+
+/* Configurações de responsividade para tablets, desktops */
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  body {
+    margin-top: var(---altura);
+  }
+
+  main {
+    max-width: 78vw;
+  }
+}
+
+/* Configurações de responsividade para celulares */
+
+@media (min-width: 300px) and (max-width: 600px) {
+  body {
+    margin-top: var(---altura);
+  }
+
+  main {
+    max-width: 75vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+
+  form {
+    max-width: 62vw;
+    height: 48vh;
+    font-size: 20px;
+  }
+
+  input {
+    width: 40vw;
+  }
+
+  button {
+    margin-top: 2vh;
+    padding: 12px 0;
+  }
+
+  .voltar {
+    margin-bottom: 15rem;
+    margin-top: 7vh;
+  }
+}
+
+/* Configurações para alguns celulares específicos */
+
+@media (min-height: 550px) {
+  main {
+    height: 70vh;
+    margin-top: -9vh;
+  }
+
+
+}
+
+@media (max-width: 420px) {
+  body {
+    margin-top: 20vh;
+  }
+}
+
+/* Responsividade para TVs */
+
+@media (min-width: 1201px) {
+  body {
+    margin-top: var(---altura);
+  }
+
+  main {
+    max-width: 900px;
+  }
 }
