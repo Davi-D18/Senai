@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  ---Green: hsl(75, 94%, 57%);
+  ---White: hsl(0, 0%, 100%);
+
+  ---Grey700: hsl(0, 0%, 20%);
+  ---Grey800: hsl(0, 0%, 12%);
+  ---Grey900: hsl(0, 0%, 8%);
+
+  ---font-principal: "Inter", sans-serif;
+
+  ---Mobile: 350px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  color: var(---White);
+  font-family: var(---font-principal);
+}
+
+body {
+  margin: 5vh 0vw;
+  background-color: var(---Grey900);
+}
+
+main {
+  width: 700px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: var(---Grey800);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+table {
+  margin: auto;
+  width: 75%;
+}
+
+table, td, tr, th {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+img {
+  width: 24px;
+}
+
+.javascript-logo {
+  border-radius: 5px;
+}
+
+td, th {
+  padding: 2px 6px;
+  text-align: center;
+}
+
+.column-projetos {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+@media(min-width:370px) and(max-width:600px) {
+  table {
+    width: 70%;
+  }
+
+  main {
+    width: 400px;
+  }
+
+  body {
+    height: 100%;
+  }
+}
+
