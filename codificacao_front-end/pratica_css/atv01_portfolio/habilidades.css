@@ -27,14 +27,20 @@ body {
 }
 
 main {
-  width: 700px;
+  width: 550px;
   padding: 10px;
   border-radius: 10px;
   margin: auto;
   background-color: var(---Grey800);
 }
 
+.voltar {
+  width: 30px;
+  margin: 1.2rem 0.2rem;
+}
+
 h1 {
+  margin-top: -1.4rem;
   text-align: center;
   margin-bottom: 2.5rem;
 }
@@ -54,7 +60,7 @@ img {
 }
 
 .javascript-logo {
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 td, th {
@@ -67,17 +73,42 @@ td, th {
   line-height: 1.5rem;
 }
 
-@media(min-width:370px) and(max-width:600px) {
+@media(min-width:380px) and (max-width:579px) {
+
   table {
-    width: 70%;
+    font-size: 14px;
+    margin: 0px;
+  }
+
+  td, th {
+    padding: 6px;
+  }
+
+  .column-projetos {
+    padding: 0px 7px;
+    text-align: left;
+  }
+
+  .voltar {
+    width: 45px;
   }
 
   main {
-    width: 400px;
+    width: 107%;
+    padding-bottom: 2rem;
   }
+}
 
-  body {
-    height: 100%;
+@media(width>=486px)and(max-width:579px) {
+  table {
+    margin: 0;
+    margin-left: 13vw;
+  }
+}
+
+@media(min-width:580px) and (max-width:650px){
+  table {
+    margin-left: 3vw;
   }
 }
 
