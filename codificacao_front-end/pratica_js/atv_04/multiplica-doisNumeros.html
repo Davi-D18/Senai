@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplicar Número</title>
+</head>
+<style>
+  .active {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 35vh;
+    margin-left: 45vw;
+    background: linear-gradient(
+      to right,
+      rgb(128, 57, 243),
+      rgba(174, 56, 228, 0.747)
+    );
+    color: white;
+    cursor: pointer;
+  }
+
+  .active:hover {
+    box-shadow: 0px 0px 7px black;
+    transition: all 0.3s;
+  }
+</style>
+<body>
+  <button class="active">Calcular</button>
+</body>
+</html>
+
+<script>
+  const buttonCalcular = document.querySelector("button")
+  
+  function multiplicarNumeros(a, b) {
+    return alert(a * b);
+  }
+  
+  buttonCalcular.addEventListener("click", (event) => {
+    let = decisao = "s";
+    do {
+      let valorA = prompt("Digite um valor para Multiplicar ");
+      let valorB = prompt("Digite um segundo valor ");
+      multiplicarNumeros(valorA, valorB);
+    
+      decisao = prompt("Deseja continuar ? ");
+    } while (decisao == "s");
+  })
+
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Par ou Impar</title>
+  </head>
+  <style>
+    .resultado {
+      font-weight: bolder;
+    }
+  </style>
+
+  <body>
+
+    <form>
+      <label for="numero">Digite um número</label>
+      <input type="text" />
+      <button>Verificar</button>
+    </form>
+    <p>Resultado: <span class="resultado"></span></p>
+
+    <script>
+      const resultadoSpan = document.querySelector(".resultado");
+      const formSubmit = document.querySelector("form");
+
+      formSubmit.addEventListener("submit", (evento) => {
+        evento.preventDefault();
+        const inputValor = Number(document.querySelector("input").value);
+        verificarParImpar(inputValor);
+      });
+      
+      function verificarParImpar(x) {
+        if (x % 2 === 0) {
+          resultadoSpan.textContent = "Esse número é par";
+        } else {
+          resultadoSpan.textContent = "Esse número é impar";
+        }
+      }
+    </script>
+
+  </body>
+</html>
