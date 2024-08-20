@@ -11,4 +11,5 @@ do {
   let valorB = Number(readline.question("Digite um segundo valor "));
   somarNumeros(valorA, valorB);
   decisao = readline.question("Deseja continuar ? ");
+  console.clear()
 } while (decisao == "s");
