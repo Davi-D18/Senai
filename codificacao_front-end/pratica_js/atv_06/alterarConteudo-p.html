@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alterar o conteúdo do P através do JS</title>
+  </head>
+  <body>
+    <p class="p1">Paragrafo que será alterado</p>
+    <p class="p2">Paragrafo que permanecerá intacto</p>
+
+    <button class="alterar">Alterar conteúdo do parágrafo</button>
+    <button class="reverter">Reverter conteúdo</button>
+
+    <script>
+      let paragrafoAlterado = document.querySelector(".p1");
+      const button = document.querySelector(".alterar")
+      const reveterButton = document.querySelector(".reverter")
+
+      const conteudoOriginalDoParagrafo = document.querySelector(".p1").textContent
+
+      button.addEventListener("click", () => {
+        paragrafoAlterado.textContent = "novo conteúdo do Parágrafo alterado em JS "
+        paragrafoAlterado.style.color = "blue"
+        paragrafoAlterado.style.transition = "all 0.5s"
+      })
+
+      reveterButton.addEventListener("click", () => {
+        paragrafoAlterado.textContent = conteudoOriginalDoParagrafo
+        paragrafoAlterado.style.color = "black"
+        paragrafoAlterado.style.transition = "all 0.5s"
+
+      })
+    </script>
+  </body>
+</html>

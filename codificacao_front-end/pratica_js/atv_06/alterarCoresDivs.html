@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alterar cores das divs e conteúdo</title>
+    <style>
+      .caixa {
+        background-color: black;
+        color: white;
+        width: 90px;
+        height: 90px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        margin-left: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      button {
+        background: linear-gradient(140deg, rgb(76, 15, 229), rgb(207, 5, 193));
+        color: white;
+        padding: 9px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: linear-gradient(140deg, rgb(55, 13, 161), rgb(137, 4, 128));;
+        transform: scale(0.96);
+        transition: all 0.5s;
+      }
+
+      main {
+        max-width: 400px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="caixa">div</div>
+      <div class="caixa">div</div>
+      <div class="caixa">div</div>
+      <button class="alterar">Alterar Divs</button>
+      <button class="reverter">Reverter Divs</button>
+    </main>
+
+    <script>
+      const divs = document.querySelectorAll(".caixa");
+      const alterarButton = document.querySelector(".alterar");
+      const reverterButton = document.querySelector(".reverter");
+
+      const conteudoDasdivs = document.querySelector(".caixa").textContent;
+
+      alterarButton.addEventListener("click", () => {
+        divs.forEach((div) => {
+          div.style.backgroundColor = "blue";
+          div.style.borderRadius = "10px";
+          div.style.transition = "all 2.5s";
+          div.textContent = "Novo Contéudo da Div";
+        });
+      });
+
+      reverterButton.addEventListener("click", () => {
+        divs.forEach((div, i) => {
+          i++
+          div.style.backgroundColor = "black";
+          div.style.transition = "all 2.5s";
+          div.textContent = `${conteudoDasdivs} ${i}`;
+        });
+      });
+    </script>
+  </body>
+</html>
