@@ -5,3 +5,7 @@
  `Módulo: Específico I`
  
  Aluno: Davi
+
+ ### Pastas
+ - Cada pasta é referente a uma matéria
+ - Dentro de cada pasta, está com pastas relacionadas a atividades, mini-projetos e pastas para praticar
