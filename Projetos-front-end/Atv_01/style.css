@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9; 
+}
+
+form {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+  animation: fadeIn 0.8s ease-in-out; /* Animação de aparecimento */
+}
+
+h1 {
+  color: #333;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.75rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c7ae0; 
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(108, 122, 224, 0.2); 
+}
+
+.senha > p {
+  font-size: 0.875rem;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+#forca-senha {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+#mensagem-senha {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+
+button {
+  background-color: #6c7ae0; 
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #5563c1; 
+  transform: translateY(-2px); 
+}
+
+button:active {
+  transform: translateY(0); 
+}
+
+/* Estilo para o botão em estado de loading */
+button.loading {
+  background-color: #6c7ae0; 
+  cursor: not-allowed;
+  opacity: 0.7;
+  position: relative;
+}
+
+/* Spinner para o loading */
+button.loading:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+/* Animação de rotação do spinner */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Estilo da notificação */
+.resposta {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #6c7ae0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  display: none; 
+  animation: sumir 5s forwards; 
+}
+
+.resposta.show {
+  display: block;
+  animation: aparecer 0.5s ease, sumir 0.5s 2s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes sumir {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.875rem;
+  }
+}
+
